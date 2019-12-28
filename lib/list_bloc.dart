@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:dio/dio.dart';
 
 class ListBloc {
-  StreamController _streamController = StreamController();
+  StreamController<List<dynamic>> _streamController = StreamController<List<dynamic>>();
 
-  Stream get output => _streamController.stream;
+  Stream<List<dynamic>> get output => _streamController.stream;
 
-  StreamSink get _input => _streamController.sink;
+  StreamSink<List<dynamic>> get _input => _streamController.sink;
 
   Dio _dio = Dio();
 
